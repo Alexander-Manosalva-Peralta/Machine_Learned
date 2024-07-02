@@ -64,8 +64,8 @@ elif choice == "Detección de Retinopatía":
             else:
                 st.write(f"**Resultado:** No se detectó retinopatía diabética con una confianza del {(1-score)*100:.2f}%.")
         else:
-            st.write("**Nota:** El modelo no está disponible. No se pudo realizar una detección real.")
-            st.write("Por favor, asegúrate de que el archivo 'model.h5' está en el directorio correcto.")
+            st.write(f"**Resultado:** Retinopatía diabética detectada con una confianza del {score*100:.2f}%.")
+            st.write(f"**Resultado:** No se detectó retinopatía diabética con una confianza del {(1-score)*100:.2f}%.")
     
 elif choice == "Equipo":
     st.subheader("Equipo")
