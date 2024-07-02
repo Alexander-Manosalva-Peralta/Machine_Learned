@@ -5,6 +5,7 @@ import os
 import tensorflow as tf
 
 # Configuración de la interfaz de Streamlit
+st.set_page_config(page_title="Sistema de Detección de Retinopatía Diabética", page_icon=":eye:", layout="wide")
 st.title("Sistema de Detección de Retinopatía Diabética")
 st.sidebar.title("Menú")
 
@@ -57,18 +58,18 @@ elif choice == "Detección de Retinopatía":
             # Mostrar el resultado
             if score > 0.5:
                 st.success(f"Resultado: Retinopatía diabética detectada con una confianza del {score*100:.2f}%.")
-                st.image("retinopatia.jpg", caption="Ejemplo de retina con retinopatía", use_column_width=True)
-                st.write("Este es un ejemplo de una imagen que podría mostrar retinopatía diabética.")
+                st.image("retinopatia_futurista.jpg", caption="Ejemplo de retina con retinopatía", use_column_width=True)
+                st.write("Esta imagen muestra una visión futurista de cómo la inteligencia artificial ayuda a detectar problemas de salud visual con precisión.")
             else:
                 st.info(f"Resultado: No se detectó retinopatía diabética con una confianza del {(1-score)*100:.2f}%.")
-                st.image("ojo_sano.jpg", caption="Ejemplo de retina sana", use_column_width=True)
-                st.write("Este es un ejemplo de una imagen de una retina sana.")
+                st.image("ojo_sano_futurista.jpg", caption="Ejemplo de retina sana", use_column_width=True)
+                st.write("Esta imagen representa un futuro donde la tecnología puede confirmar rápidamente la salud ocular sin necesidad de intervención médica.")
         else:
             st.warning("El modelo no está disponible. Por favor, asegúrate de que el archivo 'model.h5' está en el directorio correcto.")
 
 elif choice == "Equipo":
     st.subheader("Equipo")
-    st.write("Este proyecto ha sido desarrollado por un equipo multidisciplinario de la Universidad Peruana Cayetano Heredia.")
+    st.write("Este proyecto ha sido desarrollado por un equipo multidisciplinario comprometido con la salud visual y la inteligencia artificial.")
     st.sidebar.subheader("Integrantes del Equipo")
     st.sidebar.write("Lila Zaray Huanca Ampuero")
     st.sidebar.write("Yojan Alexander Manosalva Peralta")
@@ -77,8 +78,7 @@ elif choice == "Equipo":
 
 elif choice == "Acerca de":
     st.subheader("Acerca de")
-    st.write("Esta aplicación utiliza un modelo de aprendizaje profundo para detectar retinopatía diabética en imágenes del fondo de ojo. El modelo está integrado con Streamlit para proporcionar una interfaz de usuario interactiva y accesible.")
+    st.write("Esta aplicación utiliza un modelo de aprendizaje profundo para detectar retinopatía diabética en imágenes del fondo de ojo. La integración con Streamlit proporciona una interfaz accesible y educativa para los usuarios.")
     st.write("Desarrollado utilizando TensorFlow para el aprendizaje profundo y Streamlit para la visualización web.")
-    st.image("diabetic_retinopathy.jpg", caption="Imagen ilustrativa de retinopatía diabética", use_column_width=True)
-    st.write("La retinopatía diabética es una complicación de la diabetes que afecta los vasos sanguíneos de la retina, pudiendo llevar a la pérdida de visión si no se trata adecuadamente.")
-
+    st.image("diabetic_retinopathy_futurista.jpg", caption="Ilustración futurista de retinopatía diabética", use_column_width=True)
+    st.write("En un futuro cercano, herramientas como esta podrían ser comunes en consultorios médicos y hogares, mejorando el cuidado de la salud ocular globalmente.")
