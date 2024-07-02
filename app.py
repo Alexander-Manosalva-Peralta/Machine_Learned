@@ -8,7 +8,7 @@ import tensorflow as tf
 st.subheader("Sistema de Detección de Retinopatía Diabética")
 
 # Ruta al modelo preentrenado
-model_path = 'model.h5'
+model_path = './project/models/densenet121.h5'
 
 # Función para preprocesar la imagen
 def preprocess_image(image):
