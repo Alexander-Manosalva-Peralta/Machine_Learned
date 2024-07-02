@@ -2,6 +2,7 @@ import streamlit as st
 from PIL import Image
 import numpy as np
 import os
+import tensorflow as tf
 
 # Configuración de la interfaz de Streamlit
 st.subheader("Sistema de Detección de Retinopatía Diabética")
@@ -33,7 +34,6 @@ elif choice == "Detección de Retinopatía":
     model_exists = os.path.exists(model_path)
 
     if model_exists:
-        import tensorflow as tf
         model = tf.keras.models.load_model(model_path)
 
     # Configuración de la interfaz de Streamlit
@@ -70,10 +70,10 @@ elif choice == "Detección de Retinopatía":
 elif choice == "Equipo":
     st.subheader("Equipo")
     st.sidebar.header("Integrantes del Equipo")
-    st.sidebar.write("Lila")
-    st.sidebar.write("Integrante2")
-    st.sidebar.write("Integrante3")
-    st.sidebar.write("Integrante4")
+    st.sidebar.write("Lila Zaray Huanca Ampuero")
+    st.sidebar.write("Manosalva Peralta Yojan Alexander")
+    st.sidebar.write("Michael Gavino Isidro")
+    st.sidebar.write("Pacheco Vidalon Sebastián Marcelo")
     
 elif choice == "Acerca de":
     st.subheader("Acerca de")
